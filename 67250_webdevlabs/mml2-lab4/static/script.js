@@ -74,22 +74,22 @@ function greetingFunc() {
     let h = d.getHours();
     let E = document.getElementById("greeting");
     let str = '';
-
+    console.log(h);
     //check current time
     if (h < 12) {
         console.log("Good morning!");
         str = 'Good morning'
-    } else if (12 < h && h < 18) {
+    } else if (12 <= h && h < 18) {
         console.log("Good afternoon!");
         str = 'Good afternoon'
-    } else if (18 < h && h < 20){
+    } else if (18 <= h && h < 20){
         console.log("Good evening!");
         str = 'Good evening'
-    }else if ((20 < h && h< 24) || (0 < h && h < 5)){
+    }else if ((20 <= h && h<= 24) || (0 <= h && h < 5)){
         console.log("Good night!");
         str = 'Good night'
     }
-
+    console.log(str);
     // change HTML
     E.innerHTML = `<h2>${str}, I'm Michael</h2>`
 }
@@ -144,7 +144,6 @@ $('#seeLess').click(function() {
 //////////////////////// Form Validity ////////////////////////
 
 function formCheck() {
-    console.log('hi')
 
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
