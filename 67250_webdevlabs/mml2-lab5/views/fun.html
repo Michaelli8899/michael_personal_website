@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Your name professional website">
+    <title>Michael Li</title>
+    <!-- css links -->
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- js file -->
+    <script src="../static/script.js" defer></script>
+    <!-- add jQuery -->
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+    
+</head>
+    <body onload="addYear()">
+        <header>
+            <h1 id="webname">Michael Li</h1>
+            <nav>
+                <a href = '../index.html'>Home</a>
+                <a href = 'cv.html'>CV</a>
+                <a href = 'contact.html'>Contact me</a>
+                <a href = 'fun.html'>For fun</a>
+            </nav>
+            
+            
+        </header>
+        <div>
+            <h2>Things I love to do for fun</h2>
+            <p>Hello World</p>
+            <!-- <button class = 'button' id = 'funShowMore' onclick="showList()">Click to see...</button> -->
+            <div class="mainLayout">
+                <div class = 'item1'>
+                    <ul id="funList" >    
+                        <li>Playing video games</li>
+                        <li>Watching movies</li>
+                        <li>Reading books</li>
+                    </ul>
+                </div>
+                <div class = 'item2'>
+                    <!-- add an image with class="funIMG" -->
+                    <img src="../static/fun_img.jpg" alt="My Photo" width="400" class="funIMG">
+                </div>
+                <div class = 'item3'>
+                    <!-- Choose a YouTube video and embed it using an iframe in item3 of fun.html -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qM43gnigKgQ?si=KzufWWTLcDrdn6SI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class = 'item4'>
+                    <div class = 'container'>
+                        <h2> Need Some Advice? </h2>
+                        <p>Click the button to get a random piece of advice!</p>
+                        <p id = 'adviceText'> </p>
+                        <button class = 'button' id = 'adviceButton' onclick="getAdvice()">Get Advice</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>Designed and built by Michael Li. All rights reserved.</p>
+            <p id="copyYear">Copyright ©</p>
+        </footer>
+        
+    </body>
+</html>
