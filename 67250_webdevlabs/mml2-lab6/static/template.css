@@ -1,0 +1,230 @@
+:root, :host {
+  --fa-style-family-classic: 'Font Awesome 6 Free';
+  --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Free';
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: rgb(131, 195, 159);
+    }
+    50% {
+        background-color: rgb(107, 114, 189);
+    }
+    100% {
+        background-color: rgb(195, 131, 195);
+    }
+}
+
+/* add an animation for a jumping text */
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.icon::before {
+  /* Set the font and weight for this icon style */
+  font: var(--fa-font-solid);
+  /* Make sure icons render pixel-perfect */
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../webfonts/fa-solid-900.woff2");
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+}
+
+
+header {
+    grid-area: header;
+    background: rgb(195, 131, 195);
+    margin-bottom: 20px;
+    padding: 30px;
+    /* add animation */
+    animation: colorChange 5s infinite;
+    /* add jumping animation */
+    
+}
+
+nav {
+    grid-area: nav;
+    background: pink;
+    margin-bottom: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 45px;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+}
+
+.active {
+    display: block;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(148, 24, 24);
+    animation: jump 1s infinite;
+}
+
+#desktop-nav {
+    display: flex;
+    gap: 45px;
+}
+
+#mobile-nav {
+
+    display: none;
+}
+
+#nav-icon {
+    display: none;
+}
+
+.nav-links{
+    display: flex;
+}
+
+footer {
+    grid-area: footer;
+    background: rgb(133, 133, 198);
+    padding: 30px;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+        "main-img main-content"
+        'bottom-content bottom-content';
+    margin-bottom: 20px;
+        
+}
+main div {
+    padding: 20px;
+}
+
+.main-img {
+    grid-area: main-img;
+    margin-right: 20px;
+    background: rgb(217, 188, 135);
+}
+
+.main-content {
+    grid-area: main-content;
+    margin-left: 20px;
+    background: rgb(193, 193, 130);
+}
+
+.bottom-content {
+    grid-area: bottom-content;
+    margin: 20px 0px;
+    background: rgb(153, 212, 153);
+}
+
+.hide {
+    display: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "main main"
+            "footer footer";
+    }
+
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-areas:
+            "main-img"
+            'main-content'
+            'bottom-content';
+        margin-bottom: 20px;
+            
+    }
+
+    .main-img {
+        grid-area: main-img;
+        margin-bottom: 20px;
+        margin-right: 0px;
+        background: rgb(217, 188, 135);                
+    }
+    
+    .main-img img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    
+    .main-content {
+        grid-area: main-content;
+        margin-left: 0px;
+        background: rgb(193, 193, 130);
+    }
+    
+    .bottom-content {
+        grid-area: bottom-content;
+        background: rgb(153, 212, 153);
+    }
+    
+
+    nav{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    #mobile-nav {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        background: pink;
+        padding: 30px 0px;
+    }
+
+    #nav-icon {
+        display: block;
+    }
+
+    nav > a{
+        display: none;
+    }
+
+    .active {
+        display: block;
+        background: rgb(240, 141, 141);
+        border-bottom-style: none;
+        border-radius: 10px;
+
+    }
+
+    #desktop-nav {
+        display: none;
+    }
+
+}

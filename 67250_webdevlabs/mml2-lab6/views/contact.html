@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Your name professional website">
+    <title>Michael Li</title>
+    <!-- css links -->
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/template.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- js file -->
+    <script src="../static/script.js" defer></script>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+            <script>
+                (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+                  key: "AIzaSyDZGhoFJfet3vFvfOUlSZ4LbnGxusJ3eYk",
+                  v: "weekly",
+                  // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+                  // Add other bootstrap parameters as needed, using camel case.
+                });
+              </script>
+    
+</head>
+    <body style="font-family: Arial" onload="addYear(), highlightActive()">
+        <header>
+            <h1 id="webname">Michael Li</h1>
+            <nav>
+                <div class = 'nav-links' id = 'desktop-nav'>
+                    <a href = '../index.html'>Home</a>
+                    <a href = '../template.html'>Template</a>
+                    <a href = 'cv.html'>CV</a>
+                    <a href = 'contact.html'>Contact me</a>
+                    <a href = 'fun.html'>For fun</a>
+                </div>
+            </nav>
+            
+            
+        </header>
+        <div>
+            <div class = 'mainLayout'>
+                <div class = 'item1'>
+                    <h2>Find Me</h2>
+                    <!-- <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.5234984596805!2d-79.9477208107611!3d40.44320259778359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f21f58679a9f%3A0x88716b461fc4daf4!2sCarnegie%20Mellon%20University!5e1!3m2!1sen!2sus!4v1742414066098!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                    <div id="map"></div>
+                    <!-- <iframe
+  width="600"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDZGhoFJfet3vFvfOUlSZ4LbnGxusJ3eYk
+    &q=Space+Needle,Seattle+WA">
+</iframe> -->
+
+                </div>
+
+                <div class = 'item2'>
+                    <h2>Contact Me</h2>
+                    <form>
+                        <label for="name">Your name (required)</label>
+                        <input type="text" id="name" required>
+                        
+
+                        <label for="email">Your email</label>
+                        <input type="email" id="email" required>
+                        
+
+                        <label for="comment">Your comment</label>
+                        <textarea id="comment" cols="30" rows="10" required></textarea>
+                        
+                        <input type="submit" value="SEND" class = 'send-button' onclick = 'formCheck()'>
+                        <div id="error"></div>
+                    </form>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <th>Contact Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>4127588177</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>mml2@andrew.cmu.edu</td>
+                </tr>
+                <tr>
+                    <td>LinkedIn</td>
+                    <td>https://www.linkedin.com/in/michael-m-li/</td>
+                </tr>
+            </table>
+
+
+             
+        </div>
+
+        <footer>
+            <p>Designed and built by Michael Li. All rights reserved.</p>
+            <p id="copyYear">Copyright ©</p>
+        </footer>
+        
+    </body>
+</html>

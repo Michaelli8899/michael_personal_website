@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link css static/template.css -->
+    <link rel="stylesheet" href="static/template.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+     <!-- include awesome font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <meta name="viewport" content="width=500, initial-scale=1" />
+    <script src="./static/script.js" defer></script>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+</head>
+<body onload = "highlightActive()">
+    <div class = 'container'>
+        <header>
+            <h1 id="webname">Michael Li</h1>
+        </header>
+
+        <nav>
+            <i class="fas fa-bars" id = 'nav-icon' onclick = 'toggleNav()'></i>
+            <div class = 'nav-links' id = 'desktop-nav'>
+                <a href = './index.html'>Home</a>
+                <a href = './template.html'>Template</a>
+                <a href = './views/cv.html'>CV</a>
+                <a href = './views/contact.html'>Contact me</a>
+                <a href = './views/fun.html'>For fun</a>
+            </div>
+            <div class = 'nav-links' id = 'mobile-nav'>
+                <a href = './index.html'>Home</a>
+                <a href = './template.html'>Template</a>
+                <a href = './views/cv.html'>CV</a>
+                <a href = './views/contact.html'>Contact me</a>
+                <a href = './views/fun.html'>For fun</a>
+            </div>
+            
+        </nav>
+
+    
+        <main>
+
+            <div class = 'main-img'>
+                <img src = "static/michael_img.jpg" alt = "My Photo" width = "200">
+            </div>
+
+            <div class = 'main-content'>
+                <h2 id = 'greeting' >Hi, my name is Michael</h2>
+                <p id = "shortIntro">
+                    Hello, I'm Michael Li—a passionate designer and developer dedicated 
+                    to crafting intuitive digital experiences. My journey into technology 
+                    began with a deep love for creativity and problem-solving, inspiring 
+                    me to explore the dynamic intersection of design and innovation. 
+                </p>
+                <p id = "longIntro" class = 'hide'>
+                    Hello, I'm Michael Li—a passionate designer and developer dedicated 
+                    to crafting intuitive digital experiences. My journey into technology 
+                    began with a deep love for creativity and problem-solving, inspiring 
+                    me to explore the dynamic intersection of design and innovation. 
+                    I continually strive to learn, adapt, and push boundaries, blending 
+                    technical expertise with artistic vision in every project I undertake. 
+                    Welcome to my personal space, where you can discover my work, explore 
+                    my ideas, and join me on this exciting creative journey.
+                </p>
+                <button class = 'button' id = 'seeMore'>See More</button>
+                <button class = 'button hide'id = 'seeLess'>See Less</button>
+            </div>
+
+            <div class = 'bottom-content'>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur. Sed amet lacus proin 
+                    mi quam. Habitant adipiscing iaculis lacus aliquam. Convallis 
+                    elementum nulla eu quam. Mi massa dolor enim cursus. Nec amet 
+                    posuere vitae mauris adipiscing...
+                </p>
+            </div>
+    
+        </main>
+    
+        <footer>
+            <p>Designed and built by Michael Li. All rights reserved.</p>
+            <p id="copyYear">Copyright ©</p>
+        </footer>
+    </div>
+</body>
+</html>
