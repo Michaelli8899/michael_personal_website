@@ -1,0 +1,110 @@
+:root {
+    --primary-color: #6b76db; /* dark blue */
+    --secondary-color: #e0e0e0; /* light grey */
+}
+
+* {
+    font-family: Roboto;
+    padding: 5px;
+    margin: 5px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #6b76db;
+    margin-right: 15px;
+}
+
+#webname {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+th {
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    width: fit-content;
+}
+
+tr:nth-child(even) {
+    background-color: var(--secondary-color);
+}
+
+form label, form input, form textarea, form div{
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 15px;
+}
+
+form .send-button {
+    font-size: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.funIMG{
+    border-radius: 100%;
+}
+
+.container{
+    border-radius: 100%; 
+    display: inline-block;
+    border-radius: 10%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#adviceText {
+    padding: 5px 10px;
+    background-color: rgba(26, 7, 81);
+    color: white;
+    border-radius: 10px;
+}
+
+.error {
+    background-color: red;
+    font-weight: bold;
+}
+
+
+.mainLayout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainLayout div{
+    flex: 0 0 45%;
+    box-sizing: border-box;
+    padding: 5%px;
+
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
